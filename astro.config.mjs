@@ -17,9 +17,10 @@ const lslLang = JSON.parse(
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://create.secondlife.com',
+	site: 'https://martin-pitt.github.io/',
+	base: '/create/',
 	redirects: {
-		'/': '/script/'
+		'/': './script/'
 	},
 	integrations: [
 		starlight({
