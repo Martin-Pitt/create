@@ -17,7 +17,7 @@ function markEntries(item) {
 	if(item.type === 'group') item.entries.forEach(markEntries);
 	else if(item.type === 'link')
 	{
-		const itemSlug = stripLeadingAndTrailingSlashes(item.href);
+		const itemSlug = stripLeadingAndTrailingSlashes(item.href.replace('/create/', ''));
 		const itemSlugWithoutLang = stripLangFromSlug(itemSlug);
 		const isFallback = !allPages.some(entry => entry.id === itemSlug);
 		if(isFallback) item.attrs.class = 'fallback';

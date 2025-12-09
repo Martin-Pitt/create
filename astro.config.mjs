@@ -23,10 +23,6 @@ const lslLang = JSON.parse(
 export default defineConfig({
 	site: 'https://martin-pitt.github.io/',
 	base: '/create/',
-	redirects: {
-		'/': '/script/',
-		'/reference/': '/reference/categories/',
-	},
 	integrations: [
 		starlight({
 			title: 'Second Life Content Creation',
